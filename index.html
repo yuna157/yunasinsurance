@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fbf8f1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' blob: data:; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>YUNA'S INSURANCE</title>
+  <link rel="icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./vendor/jszip.min.js" defer></script>
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로</a>
+  <header class="header">
+    <div class="shell top">
+      <a class="brand" href="#home"><img src="./icon-192.png" alt="" width="42" height="42"><span><strong>YUNA'S INSURANCE</strong><small>나의 보험 상담소</small></span></a>
+      <button type="button" class="text-button" id="install" hidden>홈 화면에 추가</button>
+    </div>
+    <nav id="navigation" class="shell nav" aria-label="주 메뉴"></nav>
+  </header>
+  <main id="main" class="shell" tabindex="-1"><p class="muted">앱을 불러오는 중이에요.</p></main>
+  <footer class="shell footer"><span>YUNA'S INSURANCE</span><span>개인 보험금 청구 기록과 약관 검색</span></footer>
+  <dialog id="dialog"><div id="dialog-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <input type="file" id="pdf-input" multiple accept="application/pdf,.pdf" hidden>
+  <input type="file" id="backup-input" accept=".json,.zip,application/json,application/zip" hidden>
+</body>
+</html>
